@@ -1,6 +1,22 @@
-// A mock function to mimic making an async request for data
-export function fetchCount(amount = 1) {
-  return new Promise((resolve) =>
-    setTimeout(() => resolve({ data: amount }), 500)
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  increment,
+  incrementAsync,
+  selectCount,
+} from './counterSlice';
+
+export default function Counter() {
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
+
+
+  return (
+    <div>
+      <div>
+      
+       
+      </div>
+    </div>
   );
 }
